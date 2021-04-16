@@ -53,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
     backgroundPosition: "center",
     width: "100%",
+    minWidth: "275px",
     paddingTop: "40px",
   },
   paper: {
@@ -89,16 +90,7 @@ function SignIn({ loggedIn, logout }) {
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid container justify="center" className={classes.image}>
-        <Grid
-          item
-          xs={12}
-          sm={8}
-          md={5}
-          component={Paper}
-          direction="row"
-          elevation={6}
-          square
-        >
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Grid className={classes.paper}>
             <Avatar className={classes.avatar}>
               <img src={loginSvg} style={{ width: 50 }} alt="candela" />
