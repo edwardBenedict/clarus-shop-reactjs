@@ -12,7 +12,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { ShoppingCart } from "@material-ui/icons";
 import { Link, useLocation, useHistory } from "react-router-dom";
-import cw from "../../assets/cw.jpeg";
+import cw from "../../assets/cw.svg";
 
 import "./style.css";
 
