@@ -76,6 +76,11 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
     backgroundColor: "#AC4F87",
+    "&:hover": {
+      backgroundColor: "white",
+      color: "#AC4F87",
+      fontWeight: "bold",
+    },
   },
   linkStyle: {
     color: "white",
