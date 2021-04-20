@@ -8,25 +8,28 @@ import {
   Button,
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
+import { useContext } from "react";
+import { ProductContext } from "../../context/ProductContext";
 import "./style.css";
 
 const CustomCard = ({
   basket,
   product,
-  addProduct,
   updateProduct,
   RemoveItemFromBasket,
 }) => {
+  const { addProduct } = useContext(ProductContext);
+
   return (
     <Card className="custom-card">
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="Product-image"
           height="260"
           className="card-image"
           image={product?.url}
-          title="Contemplative Reptile"
+          title="Product Image"
         />
         <CardContent className="content">
           <Typography
@@ -66,7 +69,7 @@ const CustomCard = ({
               size="large"
               className="custom-button"
               onClick={() => {
-                addProduct(product.id, 1);
+                addProduct(product);
               }}
             >
               <ShoppingCart /> Add to basket

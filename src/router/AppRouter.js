@@ -3,6 +3,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Products from "../components/products/Products";
 import Login from "../components/login/Login";
+import Checkout from "../components/basket/Basket";
 
 const AppRouter = () => {
   return (
@@ -18,12 +19,9 @@ const DefaultContainer = () => (
   <div>
     <Navbar />
     <Switch>
-      <Route path="/login/" component={Login} />
-      <Route exact path="/">
-        <Products
-        // products={products} addProduct={addProduct}
-        />
-      </Route>
+      <Route exact path="/" component={Products} />
+      <Route exact path="/login/" component={Login} />
+      <Route exact path="/basket" component={Checkout} />
     </Switch>
   </div>
 );
