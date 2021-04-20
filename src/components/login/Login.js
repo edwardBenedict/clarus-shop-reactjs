@@ -7,6 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import Link from "@material-ui/core/Link";
 import loginSvg from "../../assets/login.svg";
 import { useHistory } from "react-router-dom";
 
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       color: "white",
     },
     "& label.Mui-focused": {
-      color: "#AC4F87",
+      color: "white",
     },
     "& .MuiInput-underline:after": {
       borderBottomColor: "#AC4F87",
@@ -76,6 +77,14 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
     backgroundColor: "#AC4F87",
   },
+  linkStyle: {
+    color: "white",
+  },
+  bottomStyle: {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+  },
 }));
 
 function SignIn({ loggedIn, logout }) {
@@ -110,7 +119,7 @@ function SignIn({ loggedIn, logout }) {
                 autoComplete="email"
                 autoFocus
                 InputLabelProps={{
-                  style: { color: "#AC4F87" },
+                  style: { color: "white" },
                 }}
               />
               <TextField
@@ -124,7 +133,7 @@ function SignIn({ loggedIn, logout }) {
                 id="password"
                 autoComplete="current-password"
                 InputLabelProps={{
-                  style: { color: "#AC4F87" },
+                  style: { color: "white" },
                 }}
               />
               <Button
@@ -136,6 +145,17 @@ function SignIn({ loggedIn, logout }) {
               >
                 Login
               </Button>
+              <Grid container className={classes.bottomStyle}>
+                <Grid item>
+                  <Link
+                    href="/signup"
+                    variant="body2"
+                    className={classes.linkStyle}
+                  >
+                    {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+              </Grid>
             </form>
           </Grid>
         </Grid>
