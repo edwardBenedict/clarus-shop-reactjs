@@ -1,5 +1,4 @@
 import { Container, Typography, Button, Grid } from "@material-ui/core";
-// import logo from "./Canon-Kit.png";
 import "./style.css";
 
 const Banner = () => {
